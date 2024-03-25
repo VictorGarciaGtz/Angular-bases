@@ -21,4 +21,13 @@ export class MainPageComponent  {
       power: 10000
     }
   ];
+
+  onNewCharacter( character: Character ): void {
+    this.characters.push(character);
+  }
+
+  onDeleteId( index: number ): void {
+    console.log({main: 1, index})
+    this.characters.splice(index, 1);
+  }
 }
